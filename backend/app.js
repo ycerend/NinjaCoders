@@ -10,13 +10,11 @@ require('console-stamp')(console, { pattern: 'dd/mm/yyyy HH:MM:ss.l' });
 
 
 var api = require('./routes/api');
-
-
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+//app.set('views', path.join(__dirname, 'views'));
+//app.set('view engine', 'ejs');
 
 
 //--------------------------------------------------- Database Coonection ----------------------------------------------
@@ -33,9 +31,6 @@ db.once('open', function() {
 });
 
 mongoose.Promise = global.Promise;
-
-//------------------------------------------------ Json web Token Setup middleware --------------------------------------------
-//use sessions for tracking logins
 
 
 //-----------------------------------------------  Express App MiddleWares ---------------------------------------------
@@ -70,7 +65,10 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.json({
+    status:(err.status || 500),
+    desc:err.message
+  });
 });
 
 module.exports = app;

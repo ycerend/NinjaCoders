@@ -51,7 +51,7 @@ router.post('/upload', function(req, res) {
   // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
   let imageFile = req.files.image;
   // Use the mv() method to place the file somewhere on your server
-  imageFile.mv('/Users/caglayanserbetci/Desktop/NinjacodersPortal/NinjacodersPortal/images/'+userId+'.jpg', function(error) {
+  imageFile.mv(path.join(__dirname, 'public')+'/images/'+userId+'.jpg', function(error) {
     if (error){
       console.log('error: '+error.message);
       return res.status(400).json({
