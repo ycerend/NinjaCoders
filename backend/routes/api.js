@@ -7,9 +7,6 @@ var codeApi = require('./codeApi');
 var courseApi = require('./courseApi');
 var fileApi = require('./fileApi');
 
-
-
-
 /* log all request for login page*/
 router.all('/', function (req, res, next) {
     console.log('Accessing to api');
