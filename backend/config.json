@@ -1,0 +1,5 @@
+﻿{
+    "connectionStringLocal": "mongodb://localhost:27017/NinjaPortal",
+    "secret": "qwerty123456asdfg123456zxcvb123456qwerty",
+    "firstMessage": "Ninjacoders ailesine katıldığın için çok teşekkür ediyoruz. la la la!"
+}

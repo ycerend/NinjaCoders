@@ -1,0 +1,21 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(141deg,#069265,#13dcbe 71%,#00fbff);
+    background-color: #f1c40f; /* Standard syntax */
+}
+
+
+.background {
+    /* The image used */
+    background: url("./images/icon-background-op.png") no-repeat center center fixed;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-background-size: cover;
+    margin: auto;
+    opacity: 1;
+
+}
