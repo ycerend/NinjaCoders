@@ -19,7 +19,7 @@ var app = express();
 
 //--------------------------------------------------- Database Coonection ----------------------------------------------
 //connect to MongoDB
-mongoose.connect(config.connectionStringLocal);
+mongoose.connect(process.env.MONGODB_URI || config.connectionStringLocal);
 var db = mongoose.connection;
 
 //handle mongo error
